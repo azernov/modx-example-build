@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '91668f3934dd6c2a38a10202b0237f54',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'df703a05d1766e8d75a25eaf3531c8dc',
+  'native_key' => 'OnManagerAuthentication',
+  'object' => '{"name":"OnManagerAuthentication","service":2,"groupname":"Security"}',
+);

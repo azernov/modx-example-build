@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd2e76b73f47c83dc1269d2a349316605',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd89bafe3e8b19d0bff9d990ad88398e5',
+  'native_key' => 'auto_isfolder',
+  'object' => '{"key":"auto_isfolder","value":true,"xtype":"combo-boolean","namespace":"core","area":"site","editedon":null}',
+);

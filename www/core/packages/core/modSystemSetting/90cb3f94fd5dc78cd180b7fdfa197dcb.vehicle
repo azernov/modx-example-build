@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '996733eb0821dd238d71f66da88d176c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '90cb3f94fd5dc78cd180b7fdfa197dcb',
+  'native_key' => 'xhtml_urls',
+  'object' => '{"key":"xhtml_urls","value":true,"xtype":"combo-boolean","namespace":"core","area":"site","editedon":null}',
+);

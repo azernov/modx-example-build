@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '227d7397bd7af4a4006858808e2bea0f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd8bf04fed1a1f954b26bbaefe138188b',
+  'native_key' => 'access_resource_group_enabled',
+  'object' => '{"key":"access_resource_group_enabled","value":true,"xtype":"combo-boolean","namespace":"core","area":"authentication","editedon":null}',
+);

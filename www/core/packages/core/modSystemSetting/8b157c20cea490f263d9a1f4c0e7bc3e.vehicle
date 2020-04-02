@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '226295acfca8f2e74f0b4e4f23c1acb9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8b157c20cea490f263d9a1f4c0e7bc3e',
+  'native_key' => 'session_gc_maxlifetime',
+  'object' => '{"key":"session_gc_maxlifetime","value":"604800","xtype":"textfield","namespace":"core","area":"session","editedon":null}',
+);

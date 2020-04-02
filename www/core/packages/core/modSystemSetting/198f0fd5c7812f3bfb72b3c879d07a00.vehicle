@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9e224e964161b95dd9ed940aa5ec6f5f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '198f0fd5c7812f3bfb72b3c879d07a00',
+  'native_key' => 'resource_tree_node_tooltip',
+  'object' => '{"key":"resource_tree_node_tooltip","value":"","xtype":"textfield","namespace":"core","area":"manager","editedon":null}',
+);

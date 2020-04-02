@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd84155c197c10f66f6947dc3a5f37da0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e18c1d7eac7be3146885f1c61376b3e0',
+  'native_key' => 'welcome_screen',
+  'object' => '{"key":"welcome_screen","value":"1","xtype":"combo-boolean","namespace":"core","area":"manager","editedon":null}',
+);

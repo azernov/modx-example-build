@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4670ad2f6deed5f8cc72133ec6951108',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '52f3c2c1f98f6fe1374bed1227b1b48f',
+  'native_key' => 'OnMediaSourceDuplicate',
+  'object' => '{"name":"OnMediaSourceDuplicate","service":1,"groupname":"Media Sources"}',
+);

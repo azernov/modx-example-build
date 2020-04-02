@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c5b84948a27a1ebb6a8e5fb931824653',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'e723132ff1c0a38dbb1a8bc2abed1b4b',
+  'native_key' => 'OnCategoryBeforeRemove',
+  'object' => '{"name":"OnCategoryBeforeRemove","service":1,"groupname":"Categories"}',
+);

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7f3dc5f6f759e3cf7abef7639f8cb258',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '2aa9599dccc0c606277164802c37a426',
+  'native_key' => 'cache_expires',
+  'object' => '{"key":"cache_expires","value":"0","xtype":"textfield","namespace":"core","area":"caching","editedon":null}',
+);

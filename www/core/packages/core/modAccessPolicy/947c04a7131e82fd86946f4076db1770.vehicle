@@ -1,0 +1,24 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"core\\/modAccessPolicy\\/947c04a7131e82fd86946f4076db1770.resolve.policies.resolver","name":"resolve.policies"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0eefb5551fc8a1c6e6f73e9bcf3a0bbe',
+  'package' => 'modx',
+  'class' => 'modAccessPolicy',
+  'signature' => '947c04a7131e82fd86946f4076db1770',
+  'native_key' => 12,
+  'object' => '{"id":12,"name":"Hidden Namespace","description":"Hidden Namespace policy, will not show Namespace in lists.","parent":0,"template":0,"class":"","data":"{\\"load\\":false,\\"list\\":false,\\"view\\":true}","lexicon":"permissions"}',
+);

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd8ee5bfeafba6666dfbe69ff1213321d',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7e44cec7a33a8c179efc6d49b6a15817',
+  'native_key' => 'tree_default_sort',
+  'object' => '{"key":"tree_default_sort","value":"menuindex","xtype":"textfield","namespace":"core","area":"manager","editedon":null}',
+);

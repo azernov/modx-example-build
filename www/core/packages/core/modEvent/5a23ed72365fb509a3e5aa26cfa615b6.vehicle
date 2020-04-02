@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd633e11bef48a0c1a6a6919197c193d7',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '5a23ed72365fb509a3e5aa26cfa615b6',
+  'native_key' => 'OnPageNotFound',
+  'object' => '{"name":"OnPageNotFound","service":1,"groupname":"System"}',
+);

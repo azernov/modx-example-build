@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '11de3de57260790231b8bca367a1a488',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '2c83054868d19c5d2d2fb895cdfb0788',
+  'native_key' => 'OnTVFormPrerender',
+  'object' => '{"name":"OnTVFormPrerender","service":1,"groupname":"Template Variables"}',
+);

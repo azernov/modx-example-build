@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b1c19822f6b95a98034b8e39c26f4974',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '3da4b60beba16b253f1e675de5d4f760',
+  'native_key' => 'OnMODXInit',
+  'object' => '{"name":"OnMODXInit","service":5,"groupname":"System"}',
+);

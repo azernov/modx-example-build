@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '90221a9a4bee59af6311d5e77285b52a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'adb2cdda180651c70d69bd1ce50fa07e',
+  'native_key' => 'container_suffix',
+  'object' => '{"key":"container_suffix","value":"\\/","xtype":"textfield","namespace":"core","area":"furls","editedon":null}',
+);

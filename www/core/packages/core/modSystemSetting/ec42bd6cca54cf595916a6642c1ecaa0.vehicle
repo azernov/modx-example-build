@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '66c4e6ecdcc2bb2f32ba3bc8fe12c6fa',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ec42bd6cca54cf595916a6642c1ecaa0',
+  'native_key' => 'site_status',
+  'object' => '{"key":"site_status","value":"1","xtype":"combo-boolean","namespace":"core","area":"site","editedon":null}',
+);

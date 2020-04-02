@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f2c81bef8ec698e4b189fcc61b091ca8',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c04ef08b0f6f9db4f7ca2ef7f44ef8b4',
+  'native_key' => 'default_media_source',
+  'object' => '{"key":"default_media_source","value":1,"xtype":"modx-combo-source","namespace":"core","area":"manager","editedon":null}',
+);

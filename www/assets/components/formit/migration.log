@@ -1,0 +1,5 @@
+[2019-04-19 08:37:25] (INFO @ /Users/roel/Development/projects/vhosts/revolution/webroot/extras/formit/core/components/formit/processors/mgr/forms/migrate.class.php : 74) -------------------------------------------------------------
+[2019-04-19 08:37:25] (INFO @ /Users/roel/Development/projects/vhosts/revolution/webroot/extras/formit/core/components/formit/processors/mgr/forms/migrate.class.php : 74) Successfully completed migration.
+[2019-04-19 08:37:25] (INFO @ /Users/roel/Development/projects/vhosts/revolution/webroot/extras/formit/core/components/formit/processors/mgr/forms/migrate.class.php : 74) A total of 1 encrypted forms are migrated.
+[2019-04-19 08:37:25] (INFO @ /Users/roel/Development/projects/vhosts/revolution/webroot/extras/formit/core/components/formit/processors/mgr/forms/migrate.class.php : 74) No mcrypt encrypted forms found.
+[2019-04-19 08:39:17] (INFO @ /Users/roel/Development/projects/vhosts/revolution/webroot/extras/formit/core/components/formit/processors/mgr/forms/migrate.class.php : 74) No mcrypt encrypted forms found.

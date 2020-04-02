@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5234f6f7d3a70fedc2c6a84e8531643a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd5302c0706e2e36ecb0d281ae375c6dc',
+  'native_key' => 'friendly_alias_lowercase_only',
+  'object' => '{"key":"friendly_alias_lowercase_only","value":"1","xtype":"combo-boolean","namespace":"core","area":"furls","editedon":null}',
+);

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b9ac39aea2f50b647b7b3eb18e712450',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'b1cb7bbebb31d1ea8cfd08d1dbd85870',
+  'native_key' => 'mail_smtp_user',
+  'object' => '{"key":"mail_smtp_user","value":"","xtype":"textfield","namespace":"core","area":"mail","editedon":null}',
+);

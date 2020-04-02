@@ -1,0 +1,16 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 
+  array (
+    0 => 'id',
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ab1b0f75fedd5867b2f057b36b1065ac',
+  'package' => 'modx',
+  'class' => 'modDashboard',
+  'signature' => 'a2b0abf2ccaaa84d908edd1e8b6877c1',
+  'native_key' => 1,
+  'object' => '{"id":1,"name":"Default","description":"","hide_trees":0}',
+);

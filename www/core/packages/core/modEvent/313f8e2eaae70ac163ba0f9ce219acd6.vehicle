@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3183c980bc539ff86c46d970148175cb',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '313f8e2eaae70ac163ba0f9ce219acd6',
+  'native_key' => 'OnDocPublished',
+  'object' => '{"name":"OnDocPublished","service":5,"groupname":"Resources"}',
+);

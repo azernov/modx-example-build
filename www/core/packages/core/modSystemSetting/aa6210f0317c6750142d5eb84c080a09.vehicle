@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '93070bc6ac754f77b98219c60fd611fb',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'aa6210f0317c6750142d5eb84c080a09',
+  'native_key' => 'mail_smtp_pass',
+  'object' => '{"key":"mail_smtp_pass","value":"","xtype":"text-password","namespace":"core","area":"mail","editedon":null}',
+);

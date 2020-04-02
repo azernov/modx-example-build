@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1467cc6ca6f65590d5c05a8f88ff7248',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '6011b61600975c34d8c05a73900d34ab',
+  'native_key' => 'link_tag_scheme',
+  'object' => '{"key":"link_tag_scheme","value":-1,"xtype":"textfield","namespace":"core","area":"site","editedon":null}',
+);

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ef330011157be4075de4576dc59e84ec',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c5d5cae5d8da2d1c9012909bad0bf66d',
+  'native_key' => 'request_method_strict',
+  'object' => '{"key":"request_method_strict","value":"0","xtype":"combo-boolean","namespace":"core","area":"gateway","editedon":null}',
+);

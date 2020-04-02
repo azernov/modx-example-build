@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '64d19078b22d7bb7f39ca3b2a3955e56',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd77bb2d1384302f2d35776405a2742d0',
+  'native_key' => 'log_target',
+  'object' => '{"key":"log_target","value":"FILE","xtype":"textfield","namespace":"core","area":"system","editedon":null}',
+);

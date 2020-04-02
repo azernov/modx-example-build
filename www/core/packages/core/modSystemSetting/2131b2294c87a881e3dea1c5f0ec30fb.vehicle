@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '13b93ce72218aa4438a907c4d0c3fef6',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '2131b2294c87a881e3dea1c5f0ec30fb',
+  'native_key' => 'mgr_source_icon',
+  'object' => '{"key":"mgr_source_icon","value":"icon-folder-open-o","xtype":"textfield","namespace":"core","area":"manager","editedon":null}',
+);

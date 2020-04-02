@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'eb002baa1e48d15b449e4a500c9fcc70',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '30451ee8f4abe012f6f8480daf509abd',
+  'native_key' => 'welcome_screen_url',
+  'object' => '{"key":"welcome_screen_url","value":"\\/\\/misc.modx.com\\/revolution\\/welcome.23.html","xtype":"textfield","namespace":"core","area":"manager","editedon":null}',
+);
