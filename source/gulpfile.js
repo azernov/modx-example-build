@@ -2,15 +2,11 @@
 var gulp = require('gulp'),
 	rimraf = require('rimraf'),
 	gulprimraf = require('gulp-rimraf'),
-	pug = require('gulp-pug'),
 	sass = require('gulp-sass'),
-	gulpSequence = require('gulp-sequence'),
 	inlineimage = require('gulp-inline-image'),
 	prefix = require('gulp-autoprefixer'),
 	plumber = require('gulp-plumber'),
-	dirSync = require('gulp-directory-sync'),
 	concat = require('gulp-concat'),
-	cssfont64 = require('gulp-cssfont64'),
 	sourcemaps = require('gulp-sourcemaps'),
 	postcss = require('gulp-postcss'),
 	assets = require('postcss-assets'),
@@ -20,26 +16,10 @@ var gulp = require('gulp'),
 	replace = require('gulp-replace');
 
 // plugins for build
-var purify = require('gulp-purifycss'),
-	uglify = require('gulp-uglify-es').default,
+var uglify = require('gulp-uglify-es').default,
 	imagemin = require('gulp-imagemin'),
 	pngquant = require('imagemin-pngquant'),
 	csso = require('gulp-csso');
-
-//plugins for testing
-var html5Lint = require('gulp-html5-lint'),
-	reporter = require('postcss-reporter'),
-	stylelint = require('stylelint'),
-	postcss_scss = require("postcss-scss");
-
-// plugins for screenshots testing
-var img1 = [], img2 = [], filesRead = 0, pageName;
-
-var initialPageWidth = 1920;
-
-var pageList = [
-	'index',
-];
 
 var assetsDir = 'assets/';
 var outputDir = 'dist/';
@@ -56,17 +36,6 @@ var snippetsDir = '../www/core/components/gitmodx/elements/snippets/';
 var chunksDir = '../www/core/components/gitmodx/elements/chunks/';
 
 //----------------------------------------------------Compiling
-gulp.task('pug', function () {
-	return gulp.src([assetsDir + 'pug/*.pug', '!' + assetsDir + 'pug/_*.pug'])
-		.pipe(plumber())
-		.pipe(pug({pretty: true}))
-		.on( 'error', notify.onError(
-			{
-				message: "<%= error.message %>",
-				title: "PUG Error!"
-			}))
-		.pipe(gulp.dest(outputDir));
-});
 
 gulp.task('copyToModxTemplates', function () {
 	return gulp.src([outputDir + '*.html'])
@@ -98,22 +67,10 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest(productionDir + 'styles/'));
 });
 
-gulp.task('jsConcatLibs', function () {
-	return gulp.src(assetsDir + 'js/libs/**/*.js')
-		.pipe(concat('libs.js', {newLine: ';'}))
+gulp.task('jsConcat', function () {
+	return gulp.src(assetsDir + 'js/all/**/*.js')
+		.pipe(concat('all.js', {newLine: ';'}))
 		.pipe(gulp.dest(productionDir + 'js/'));
-});
-
-gulp.task('jsConcatComponents', function () {
-	return gulp.src(assetsDir + 'js/components/**/*.js')
-		.pipe(concat('components.js', {newLine: ';'}))
-		.pipe(gulp.dest(productionDir + 'js/'));
-});
-
-gulp.task('fontsConvert', function () {
-	return gulp.src([assetsDir + 'fonts/*.woff', assetsDir + 'fonts/*.woff2'])
-		.pipe(cssfont64())
-		.pipe(gulp.dest(productionDir + 'styles/'));
 });
 
 //----------------------------------------------------Compiling###
@@ -141,14 +98,11 @@ gulp.task('jsSync', function () {
 
 //watching files and run tasks
 gulp.task('watch', function (done) {
-	gulp.watch(assetsDir + 'pug/**/*.pug', gulp.series('pug'));
 	gulp.watch(assetsDir + 'sass/**/*.scss', gulp.series('sass'));
 	gulp.watch(assetsDir + 'js/**/*.js', gulp.series('jsSync'));
-	gulp.watch(assetsDir + 'js/libs/**/*.js', gulp.series('jsConcatLibs'));
-	gulp.watch(assetsDir + 'js/components/**/*.js', gulp.series('jsConcatComponents'));
+	gulp.watch(assetsDir + 'js/all/**/*.js', gulp.series('jsConcat'));
 	gulp.watch(assetsDir + 'i/**/*', gulp.series('imageSync'));
-	gulp.watch(assetsDir + 'fonts/**/*', gulp.series('fontsSync', 'fontsConvert'));
-
+	gulp.watch(assetsDir + 'fonts/**/*', gulp.series('fontsSync'));
 	gulp.watch(templatesDir + '**/*.tpl', gulp.series('clean-resources-cache','clean-pdotools-cache','clean-snippets-cache'));
 	gulp.watch(chunksDir + '**/*.tpl', gulp.series('clean-resources-cache','clean-pdotools-cache','clean-snippets-cache'));
 	gulp.watch(snippetsDir + '**/*.php', gulp.series('clean-resources-cache','clean-pdotools-cache','clean-snippets-cache'));
@@ -194,7 +148,6 @@ gulp.task('jsBuild', function () {
 //copy, minify css
 gulp.task('cssBuild', function () {
 	return gulp.src([productionDir + 'styles/**/!(*.min)*.css'])
-	//.pipe(purify([productionDir + 'js/**/*', outputDir + '**/*.html']))
 		.pipe(csso())
 		.pipe(rename(function (path) {
 			path.extname = '.min.css';
@@ -203,34 +156,34 @@ gulp.task('cssBuild', function () {
 });
 
 
-//// --------------------------------------------If you need iconfont
-// var iconfont = require('gulp-iconfont'),
-// 	iconfontCss = require('gulp-iconfont-css'),
-// 	fontName = 'iconfont';
-// gulp.task('iconfont', function () {
-// 	gulp.src([assetsDir + 'i/icons/*.svg'])
-// 		.pipe(iconfontCss({
-// 			path: 'assets/sass/templates/_icons_template.scss',
-// 			fontName: fontName,
-// 			targetPath: '../../sass/_icons.scss',
-// 			fontPath: '../fonts/icons/',
-// 			svg: true
-// 		}))
-// 		.pipe(iconfont({
-// 			fontName: fontName,
-// 			svg: true,
-// 			formats: ['svg','eot','woff','ttf']
-// 		}))
-// 		.pipe(gulp.dest('assets/fonts/icons'));
-// });
+//--------------------------------------------If you need iconfont
+/*var iconfont = require('gulp-iconfont'),
+	iconfontCss = require('gulp-iconfont-css'),
+	fontName = 'iconfont';
+gulp.task('iconfont', function () {
+	gulp.src([assetsDir + 'i/icons/!*.svg'])
+		.pipe(iconfontCss({
+			path: 'assets/sass/_icons_template.scss',
+			fontName: fontName,
+			targetPath: '../../sass/_icons.scss',
+			fontPath: '../fonts/icons/',
+			svg: true
+		}))
+		.pipe(iconfont({
+			fontName: fontName,
+			svg: true,
+			formats: ['svg']
+		}))
+		.pipe(gulp.dest('assets/fonts/icons'));
+});*/
 
 // --------------------------------------------If you need svg sprite
-var svgSprite = require('gulp-svg-sprite'),
+/*var svgSprite = require('gulp-svg-sprite'),
 	svgmin = require('gulp-svgmin'),
 	cheerio = require('gulp-cheerio');
 
 gulp.task('svgSpriteBuild', function () {
-	return gulp.src(assetsDir + 'i/icons/*.svg')
+	return gulp.src(assetsDir + 'i/icons/!*.svg')
 	// minify svg
 		.pipe(svgmin({
 			js2svg: {
@@ -264,26 +217,7 @@ gulp.task('svgSpriteBuild', function () {
 			}
 		}))
 		.pipe(gulp.dest(assetsDir + 'i/sprite/'));
-});
-
-//testing your build files
-gulp.task('validation', function () {
-	return gulp.src(buildDir + '**/*.html')
-		.pipe(html5Lint());
-});
-
-gulp.task('cssLint', function () {
-	return gulp.src([assetsDir + 'sass/**/*.scss', '!' + assetsDir + 'sass/templates/*.scss'])
-		.pipe(postcss(
-			[
-				stylelint(),
-				reporter({ clearMessages: true })
-			],
-			{
-				syntax: postcss_scss
-			}
-		));
-});
+});*/
 
 //MODX CLEAN CACHE
 
@@ -304,9 +238,4 @@ gulp.task('clean-snippets-cache',function(){
 });
 
 
-gulp.task('default', gulp.series(gulp.parallel('pug', 'sass', 'imageSync', 'fontsSync', 'fontsConvert', 'jsConcatLibs', 'jsConcatComponents', 'jsSync', 'watch')));
-
-gulp.task('build', gulp.series(
-	'cleanBuildDir',
-	gulp.parallel('imgBuild', 'jsBuild', 'cssBuild', 'copySprite')
-));
+gulp.task('default', gulp.series(gulp.parallel('sass', 'imageSync', 'fontsSync', 'jsConcat'), 'jsSync', 'watch'));
