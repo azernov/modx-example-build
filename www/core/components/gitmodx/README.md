@@ -29,57 +29,12 @@ Rewrite system index.php files
 ------------------------------
 Yes, I know, that rewriting system code is not right. But I have no another solution.
 
-### index.php in base path
-
-Replace include path of modx class in line 27 to:
-```php
-MODX_CORE_PATH . "components/gitmodx/model/gitmodx/gitmodx.class.php"
+Simply run script `cliscripts/changeindex.php`. He will make some replacements in files:
 ```
-
-It will looks like this:
-```php
-...
-/* include the modX class */
-if (!@include_once (MODX_CORE_PATH . "components/gitmodx/model/gitmodx/gitmodx.class.php")) {
-    $errorMessage = 'Site temporarily unavailable';
-...
+MODX_BASE_PATH.'index.php'
+MODX_MANAGER_PATH.'index.php'
+MODX_CONNECTORS_PATH.'index.php'
 ```
-
-Then replace name of modx class from modX to gitModX in line 39:
-```php
-$modx = new gitModx();
-```
-
-
-### index.php in manager path
-
-Do the same operations in manager/index.php
-
-Line 37:
-```php
-...
-if (!(include_once MODX_CORE_PATH . 'components/gitmodx/model/gitmodx/gitmodx.class.php')) {
-...
-```
-
-Line 43:
-```php
-$modx= new gitModx('', array(xPDO::OPT_CONN_INIT => array(xPDO::OPT_CONN_MUTABLE => true)));
-```
-
-### index.php in connectors path
-
-Do the same operations in connectors/index.php
-
-Line 24-26:
-```php
-...
-if (!include_once(MODX_CORE_PATH . 'components/gitmodx/model/gitmodx/gitmodx.class.php')) die();
-
-$modx = new gitModX('', array(xPDO::OPT_CONN_INIT => array(xPDO::OPT_CONN_MUTABLE => true)));
-...
-```
-
 
 Usage
 =====
@@ -116,11 +71,43 @@ Create chunk
 ------------
 For chunks you should do the same process, but in core/components/chunks/ catalog.
 
+Create plugins
+--------------
+Go to core/components/gitmodx/elements/plugins/
+
+Firstly, create file with the code of plugin. For example, myPlugin.php
+
+Next, you should define the events which the plugin react on.
+
+Go to the file plugins.inc.php and add events and your plugin.
+
+For example:
+```
+<?php
+return array(
+    'OnHandleRequest' => array(
+        'myPlugin'
+    ),
+    'OnLoadWebDocument' => array(
+        'myPlugin
+    )
+);
+```
+
 Create system settings
 ----------------------
 If you have often-change system settings you can duplicate them into gitmodx config file.
 
 **But you must remember, that file-based system settings will override system settings stored in database.**
+
+You also can group settings by separate files *.inc.php
+
+For example:
+```
+core/components/gitmodx/config/config.inc.php
+core/components/gitmodx/config/mycomponent.inc.php
+core/components/gitmodx/config/minishop2.inc.php
+```
 
 Open core/components/gitmodx/config/config.inc.php
 
@@ -158,6 +145,15 @@ To create context setting(s) you should do the same process as with system setti
 
 ```
 core/components/gitmodx/config/[context_key]/config.inc.php
+```
+
+You also can group settings by separate files *.inc.php
+
+For example:
+```
+core/components/gitmodx/config/web/config.inc.php
+core/components/gitmodx/config/web/mycomponent.inc.php
+core/components/gitmodx/config/web/minishop2.inc.php
 ```
 
 **But you must remember that settings defined in file will be overriden by context settings stored in database**
