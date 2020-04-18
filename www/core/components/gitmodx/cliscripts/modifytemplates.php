@@ -37,7 +37,7 @@ function processChunkFunction($filePath)
         array_pop($tmp);
     }
     $chunkName = implode('.',$tmp);
-    $chunkPlaceholder = "{'".$chunkName."' | chunk}";
+    $chunkPlaceholder = "{include '".$chunkName."'}";
     $chunkContent = file_get_contents($filePath);
 
     $tDir = opendir($templatesDir);
