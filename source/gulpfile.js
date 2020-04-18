@@ -44,6 +44,7 @@ gulp.task('copyToModxTemplates', function () {
 			//path.basename += '_new';
 		}))
 		.pipe(replace(/(src|href)=('|")(i|images|js|styles|fonts)/gi, '$1=$2assets/$3'))
+        .pipe(replace(/(url\()(['"])(i|images|js|styles|fonts)/gi, '$1$2assets/$3'))
 		.pipe(gulp.dest(templatesDir));
 });
 
