@@ -13,13 +13,13 @@ $modx->setLogLevel(MODX_LOG_LEVEL_INFO);
 
 $firstTemplate = $modx->getObject('modTemplate',1);
 
-$files = glob(dirname(dirname(__FILE__)).'/elements/templates/*.tpl');
+$files = glob(dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'elements'.DIRECTORY_SEPARATOR.'templates'.DIRECTORY_SEPARATOR.'*.tpl');
 $indexWasSaved = false;
 foreach($files as $file)
 {
     $content = file_get_contents($file);
-    $pieces = explode('/',$file);
-    $name = end($pieces);
+    $pieces = explode(DIRECTORY_SEPARATOR,$file);
+    $name = basename($file);
     $name = trim(preg_replace('#\.tpl$#ui','',$name));
     $fileRelative = str_replace(MODX_BASE_PATH,'',$file);
 
