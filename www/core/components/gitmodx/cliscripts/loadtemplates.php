@@ -18,11 +18,10 @@ $indexWasSaved = false;
 foreach($files as $file)
 {
     $content = file_get_contents($file);
-    $pieces = explode(DIRECTORY_SEPARATOR,$file);
     $name = basename($file);
     $name = trim(preg_replace('#\.tpl$#ui','',$name));
-    $fileRelative = str_replace(MODX_BASE_PATH,'',$file);
-
+    $fileRelative = str_replace(str_replace("/",DIRECTORY_SEPARATOR,MODX_BASE_PATH), '', $file);
+    echo $fileRelative."\n";
     if($template = $modx->getObject('modTemplate',array(
         'static_file' => $fileRelative
     )))
